@@ -1,0 +1,122 @@
+image=input("enter the path of image");
+disp("press 1 for red colour ");
+disp("press 2 for green colour ");
+disp("press 3 for blue colour ");
+disp("press 4 for cyan colour ");
+disp("press 5 for purple colour ");
+disp("press 6 for  colour yellow ");
+colour=input('write the image colourof image  you want ');
+background=input(" the colour of background");
+image1=imread(image);
+layer_1=image1(:,:,1);
+layer_2=image1(:,:,2);
+layer_3=image1(:,:,3);
+
+if(colour==1 && background==0)
+    
+    layer_2(:,:)=0;
+    layer_3(:,:)=0;
+
+    img=cat(3,layer_1,layer_2,layer_3);
+    imshow(img)
+
+end
+
+if(colour==2 && background==0)
+    layer_1=image1(:,:,1);
+    layer_2=image1(:,:,2);
+    layer_3=image1(:,:,3);
+    layer_1(:,:)=0;
+    
+    layer_3(:,:)=0;
+
+    img=cat(3,layer_1,layer_2,layer_3);
+    imshow(img)
+
+end
+if(colour==3 && background==0)
+    layer_1=image1(:,:,1);
+    layer_2=image1(:,:,2);
+    layer_3=image1(:,:,3);
+    layer_1(:,:)=0;
+    
+    layer_2(:,:)=0;
+
+    img=cat(3,layer_1,layer_2,layer_3);
+    imshow(img)
+
+end
+if(colour==4 && background==0)
+    layer_1=image1(:,:,1);
+    layer_2=image1(:,:,2);
+    layer_3=image1(:,:,3);
+    layer_1(:,:)=0;
+    
+    
+
+    img=cat(3,layer_1,layer_2,layer_3);
+    imshow(img)
+
+end
+if(colour==5 && background==0)
+    layer_1=image1(:,:,1);
+    layer_2=image1(:,:,2);
+    layer_3=image1(:,:,3);
+    layer_2(:,:)=0;
+
+
+    img=cat(3,layer_1,layer_2,layer_3);
+    imshow(img)
+
+end
+if(colour==6 && background==0)
+    layer_1=image1(:,:,1);
+    layer_2=image1(:,:,2);
+    layer_3=image1(:,:,3);
+   
+    
+    layer_3(:,:)=0;
+
+    img=cat(3,layer_1,layer_2,layer_3);
+    imshow(img)
+
+end
+
+if(colour==1 && background==3)
+ band_1=image1(:,:,1);
+band_2=image1(:,:,2);
+band_3=image1(:,:,3);
+band_1_1=255-band_1;
+band_2_2=255-band_2;
+imshow(cat(3,band_1,band_2_2,band_3_3))
+
+end
+if(colour==2 && background==6)
+band_1=image1(:,:,1);
+band_2=image1(:,:,2);
+band_3=image1(:,:,3);
+band_1_1=255-band_1;
+band_2_2=255-band_2;
+imshow(cat(3,band_1_1,band_2_2,band_3))
+end
+if(colour==1 && background==2)
+band_1=image1(:,:,1);
+band_2=image1(:,:,2);
+band_3=image1(:,:,3);
+band_2_2=255-band_2;
+band_3_3=255-band_3;
+imshow(cat(3,band_1,band_2_2,band_3_3))
+end
+if(colour==3 && background==5)
+band_1=image1(:,:,1);
+band_2=image1(:,:,2);
+band_3=image1(:,:,3);
+band_1_1=255-band_1;
+band_3_3=255-band_3;
+imshow(cat(3,band_1_1,band_2,band_3_3))
+end
+
+
+
+
+
